@@ -20,3 +20,19 @@ html{
 }
 
 
+/* BREAKPOINTS 590px */
+
+@media(max-width:590px){
+    .cabecalho{
+        flex-direction: column ;}
+}
+
+    .cabecalho nav{
+        flex-wrap: nowrap;
+        height: 20vh;
+    }
+    .cabecalho a{
+        padding: 3vh 0;
+        font-size: 2rem;
+    }
+/* BREAKPOINTS 590px */
