@@ -50,6 +50,7 @@ eyePass.addEventListener("click", () => {
 })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //LISTA DE OBJETOS
 let listaDeUsuarios = [
   {
@@ -138,3 +139,100 @@ addEventListener("click", (evt)=>{
 
   }
   });
+=======
+//LISTA DE OBJETOS  
+let listaDeUsuarios = [
+  {
+    nomeCompleto: "Cevilha da Silva",
+    nomeUsuario: "Cevilha",
+    senhaUsuario: "123456"    
+  }
+  ,
+  {
+    nomeCompleto: "Seba da Costa",
+    nomeUsuario: "Seba",
+    senhaUsuario: "123456"    
+  }
+  ,
+  {
+    nomeCompleto: "Zuleide Camacho",
+    nomeUsuario: "zuzu",
+    senhaUsuario: "123456"    
+  }
+  ,
+  {
+    nomeCompleto: "Ednaldo Sandro",
+    nomeUsuario: "edi",
+    senhaUsuario: "123456"    
+  }
+  ,
+  {
+    nomeCompleto: "Moscone Oswaldo",
+    nomeUsuario: "mosca",
+    senhaUsuario: "123456"    
+  }
+];
+
+
+
+addEventListener("click", (evt)=>{
+
+
+    //USUáRIO LOGADO
+    const usuarioLogado = {
+        nomeUsuarioLogado: inputUser.value,
+        senhaUsuarioLogado: inputSenha.value 
+    }
+
+
+    let usuarioValidado = {};
+    
+
+        
+
+       //   if(usuarioLogado.nomeUsuarioLogado == usuario.nomeUsuario && usuarioLogado.
+       //   senhaUsuarioLogado == usuario.senhaUsuario){
+       //       alert("VALIDADO");
+       //   } else {
+       //       alert("NÃO VALIDADO");
+       //   }
+       //
+       if (evt.target.id == "btnSubmit"){
+          for (let x = 0;x < listaDeUsuarios.length; x++){
+
+              if(usuarioLogado.nomeUsuarioLogado == listaDeUsuarios[x].nomeUsuario &&
+              usuarioLogado.senhaUsuarioLogado == listaDeUsuarios[x].senhaUsuario){
+                  usuarioValidado = listaDeUsuarios[x];
+                  break;
+          }
+        }
+       }
+      
+      
+
+      const msgStatus = document.querySelector("#status-info");
+
+
+    if(usuarioValidado != null) {
+      msgStatus.setAttribute("Style", "color:#00ff00");
+      msgStatus.innerHTML = `<span><strong>O usuario ${usuarioValidado.
+      nomeCompleto} efetuou o login com Sucesso!</strong></span>`;
+
+
+
+
+      //Redirect
+      setTimeout(()=>{
+
+      }, 3000);
+      Window.location.href = "../index.html";
+
+    }else{
+      msgStatus.setAttribute("Style", "color:#ff0000");
+      msgStatus.innerHTML = `<span><>Nome de Usuario ou Senha inválidos!</
+      strong></span>`;
+    }
+
+
+});
+>>>>>>> 61302f45b1b83091cdc3d5688c87f3037bc29eae
