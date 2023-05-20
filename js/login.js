@@ -49,6 +49,97 @@ eyePass.addEventListener("click", () => {
   }
 })
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+//LISTA DE OBJETOS
+let listaDeUsuarios = [
+  {
+      nomeCompleto : "Cevilha da Silva",
+      nomeUsuario : "cevilha",
+      senhaUsuario: "123456"
+  }
+  ,
+  {
+      nomeCompleto : "Seba da Costa",
+      nomeUsuario : "seba",
+      senhaUsuario: "123456"
+  }
+  ,
+  {
+      nomeCompleto : "Zuleide Camacho",
+      nomeUsuario : "zuzu",
+      senhaUsuario: "123456"
+  }
+  ,
+  {
+      nomeCompleto : "Ednaldo Sandro",
+      nomeUsuario : "edi",
+      senhaUsuario: "123456"
+  }
+  ,
+  {
+      nomeCompleto : "Moscone Oswaldo",
+      nomeUsuario : "mosca",
+      senhaUsuario: "123456"
+  }
+];
+
+addEventListener("click", (evt)=>{
+
+  
+  //USUÁRIO LOGADO
+  const usuarioLogado = {
+      nomeUsuarioLogado : inputUser.value,
+      senhaUsuarioLogado: inputSenha.value
+  }
+
+
+  if(evt.target.id == "btnSubmit"){
+
+      
+  //USUÁRIO VALIDADO
+  let usuarioValidado = {
+  };
+      // listaDeUsuarios.forEach( (usuario)=>{
+
+      //     if(usuarioLogado.nomeUsuarioLogado == usuario.nomeUsuario && usuarioLogado.senhaUsuarioLogado == usuario.senhaUsuario){
+      //         alert("VALIDADO");
+      //     }
+      // });
+
+  try{
+      for (let x = 0; x < listaDeUsuarios.length; x++) {
+          
+          if(usuarioLogado.nomeUsuarioLogado == listaDeUsuarios[x].nomeUsuario && usuarioLogado.senhaUsuarioLogado == listaDeUsuarios[x].senhaUsuario){
+              usuarioValidado = listaDeUsuarios[x];
+              throw "VALIDADO";
+          }
+      }
+
+      throw "NÃO VALIDADO";
+  }
+  catch(msg){
+
+      //Recuperando a msg de Status
+      const msgStatus = document.querySelector("#status-info");
+      if(msg == "VALIDADO"){
+          msgStatus.setAttribute("style", "color:#00ff00");
+          msgStatus.innerHTML = `<span><strong>O usuário ${usuarioValidado.nomeCompleto} efetuou o login com Sucesso!</strong></span>`;
+
+          //Redirect
+          setTimeout(()=>{
+              window.location.href = "../index.html";
+          }, 3000);
+
+      }else{
+          msgStatus.setAttribute("style", "color:#ff0000");
+          msgStatus.innerHTML = `<span><strong>Nome de usuário ou senha inválidos!</strong></span>`;
+      }
+  }
+
+  }
+  });
+=======
 //LISTA DE OBJETOS  
 let listaDeUsuarios = [
   {
@@ -144,3 +235,4 @@ addEventListener("click", (evt)=>{
 
 
 });
+>>>>>>> 61302f45b1b83091cdc3d5688c87f3037bc29eae
