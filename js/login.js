@@ -49,6 +49,7 @@ eyePass.addEventListener("click", () => {
   }
 })
 
+<<<<<<< HEAD
 //LISTA DE OBJETOS
 let listaDeUsuarios = [
   {
